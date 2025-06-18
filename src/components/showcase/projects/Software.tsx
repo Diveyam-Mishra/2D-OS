@@ -1,277 +1,151 @@
+
+// @ts-ignore
+import masterverseVideo from '../../../assets/pictures/projects/software/MasterversAcharya Main Chatbot.png';
+// @ts-ignore
+import microservicesVideo from '../../../assets/pictures/projects/software/computer.mp4';
+import Trabii from '../../../assets/pictures/projects/software/Frame 229.jpg';
+// @ts-ignore
+import datawarehouseVideo from '../../../assets/pictures/projects/software/image.png';
 import React from 'react';
 // @ts-ignore
-import saga from '../../../assets/pictures/projects/software/saga.mp4';
-// @ts-ignore
-import computer from '../../../assets/pictures/projects/software/computer.mp4';
-// @ts-ignore
-import scroll from '../../../assets/pictures/projects/software/scroll.mp4';
+// import masterverseVideo from '../../../assets/pictures/projects/software/masterverse.mp4';
+// // @ts-ignore
+// import microservicesVideo from '../../../assets/pictures/projects/software/microservices.mp4';
+// // @ts-ignore
+// import datawarehouseVideo from '../../../assets/pictures/projects/software/datawarehouse.mp4';
 import ResumeDownload from '../ResumeDownload';
-import VideoAsset from '../../general/VideoAsset';
+// import VideoAsset from '../../general/VideoAsset';
 
 export interface SoftwareProjectsProps {}
 
 const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
+        const bronzeStyle = { color: '#cd7f32', fontWeight: 'bold' };
+    const silverStyle = { color: '#78706E', fontWeight: 'bold' };
+    const goldStyle = { color: '#ffd700', fontWeight: 'bold' };
     return (
         <div className="site-page-content">
             <h1>Software</h1>
             <h3>Projects</h3>
             <br />
             <p>
-                Below are some of my favorite software projects I have worked on
-                over the last few years.
+                Here are some of my most impactful software engineering projects, showcasing my skills across full-stack development, microservices, and data engineering.
             </p>
             <br />
             <ResumeDownload />
             <br />
             <div className="text-block">
-                <h2>henryheffernan.com</h2>
+                <h2>Trabii</h2>
                 <br />
                 <p>
-                    henryheffernan.com is my portfolio website, and also the
-                    website you are on right now. This project was an absolute
-                    joy to make and challenged me both technically and
-                    creatively. Early in 2022, I knew I wanted to make an
-                    interactive portfolio to aid my job search. I eventually got
-                    the idea for this site around early February and began
-                    development early March. I've been developing it alongside
-                    my last semester at school and if you are reading this, it's
-                    pretty much done!
+                    Trabii is a full-stack application I built to help users find and book local events and activities.
+                    Built with Flutter for frontend and FASTAPI for backend, Trabii leverages a microservices architecture to deliver a seamless user experience. 
+                    The platform allows users to discover events based on their interests, book tickets, and manage their bookings seamlessly.
+                    The platform connects service providers with customers through a user-friendly interface.
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={computer} />
+                    <img src={Trabii} alt="Trabii user interface" style={{ width: '100%', padding: 12 }} />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 1:</b> Blender Scene of the 3D website.
-                            The scene from Blender was baked and exported in a
-                            GLTF format.
+                            <b>Figure 1:</b> Trabii user interface showcasing event discovery and booking.
+                        </sub>
+                    </p>
+                </div>
+                  <h3>Key Achievements:</h3>
+                <ul>
+                    <li>Built and integrated a cutting-edge (Graph Neural Network)-based recommendation system, driving +60% growth in user engagement by delivering highly personalized and context-aware recommendations.</li>
+                    <li>Optimized system scalability and resilience, ensuring seamless deployments across cloud-native distributed infrastructure, directly enhancing uptime, fault tolerance, and customer satisfaction.</li>
+                    <li>Trabii's architecture is designed to handle high traffic and large datasets, ensuring fast response times and a smooth user experience.</li>
+                    <li>The platform integrates with various third-party APIs for payment processing, event management, and user authentication.</li>
+                    <li>Worked at the intersection of ML, backend engineering, and DevOps, providing end-to-end ownership of model development, deployment, and operational stability for mission-critical production systems.</li>
+                </ul>
+                <br />
+                <h2>Masterverse Acharya</h2>
+                <br />
+                <p>
+                    Masterverse Acharya is a full-stack web platform I developed to guide users on personalized spiritual journeys. 
+                    The system allows users to explore teachings, rituals, and customized learning paths curated by spiritual mentors.
+                </p>
+                <br />
+                <div className="captioned-image">
+                    <img src={masterverseVideo} alt="Interactive user interface from Masterverse Acharya" style={{ width: '100%', padding: 12 }} />
+                    <p style={styles.caption}>
+                        <sub>
+                            <b>Figure 1:</b> Interactive user interface from Masterverse Acharya.
+                        </sub>
+                    </p>
+                </div><h3>Technical Implementation:</h3>
+                <ul>
+                    <li>Built using React.js for the frontend, Django for the backend, and Postgres for data storage</li>
+                    <li>The platform supports user authentication, recommendation engines, content management, and responsive UI design</li>
+                    <li>Integrated with 3D visual elements to create an immersive learning experience</li>
+                    <li>The project challenged me to handle everything from UI/UX design to cloud deployment, building a fully scalable SaaS-style product that merges modern tech with timeless spirituality</li>
+                </ul>
+            </div>
+
+            {/* <div className="text-block">
+                <h2>Java Microservices Platform — Distributed System Architecture</h2>
+                <br />
+                <p>
+                    In this project, I architected and developed a microservices-based platform using Java Spring Boot, Docker, and Kubernetes, following industry best practices for scalability and maintainability.
+                </p>
+                <br />
+                <div className="captioned-image">
+                    <VideoAsset src={microservicesVideo} />
+                    <p style={styles.caption}>
+                        <sub>
+                            <b>Figure 2:</b> Microservices communication visualization.
                         </sub>
                     </p>
                 </div>
                 <p>
-                    Now, a quick technical breakdown of the site. The website is
-                    split into two parts, the 3D site, and the 2D OS site. The
-                    3D site uses Three.js to render the scene and renders the 2D
-                    site inside of it using an iframe. The 2D OS site is a
-                    simple react site that is hosted{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://henryheffernan.vercel.app/"
-                    >
-                        here
-                    </a>{' '}
-                    and works as a standalone web app. The actual rendering of
-                    the 2D site is accomplished using a CSS renderer provided by
-                    Three.js that transforms the html of the 2D site with 3D CSS
-                    transforms to give the illusion of three dimensionality.
+                    The system was composed of loosely coupled services handling user management, authentication (JWT), payment processing, notification services, and audit logging. Each service was containerized and deployed to a Kubernetes cluster with full CI/CD automation.
                 </p>
-                <br />
-                <h3>Links:</h3>
-                <ul>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://henryheffernan.com"
-                        >
-                            <p>
-                                <b>[3D Site]</b> - henryheffernan.com
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://henryheffernan.vercel.app/"
-                        >
-                            <p>
-                                <b>[OS Site]</b> - henryheffernan.vercel.app
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/portfolio-website"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - 3D Site Repository
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/portfolio-inner-site"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - OS Site Repository
-                            </p>
-                        </a>
-                    </li>
-                </ul>
                 <p>
-                    I'm skipping over a lot of details in exchange for brevity,
-                    but I do plan on doing a more in depth breakdown for those
-                    interested sometime in the future. To get updates with that
-                    project feel free to follow me on twitter{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://twitter.com/henryheffernan"
-                    >
-                        @henryheffernan
-                    </a>
+                    Implemented inter-service communication via REST APIs and asynchronous messaging queues (RabbitMQ), ensuring resilience, fault tolerance, and seamless horizontal scaling under heavy loads.
                 </p>
-            </div>
+            </div> */}
+
             <div className="text-block">
-                <h2>Guntattchment Saga The Sequel</h2>
+                <h2>Data Warehouse</h2>
+                <h2>Medallion Architecture</h2>
                 <br />
                 <p>
-                    Guntattchment Saga or GSTS is a game I made with my good
-                    friend Scott Bass back in 2019. The game is a wave based top
-                    down shooter where you progress by building the most
-                    outrageous of weapons through attaching as many attachments
-                    on your weapon as you can. The game ceased development in
-                    2019 because we unfortunately both had packed school
-                    schedules and were unable to find the time to work on it.
+                    This project involved architecting a modern data warehouse following the Medallion architecture pattern. The system pipelines raw, semi-processed, and fully curated datasets through Bronze, Silver, and Gold layers for maximum data integrity and analytical readiness.
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={saga} />
-                    <div style={styles.caption}>
-                        <p>
-                            <sub>
-                                <b>Figure 2: </b> Guntattchment Saga Gameplay
-                                demo, featuring the main character along with a
-                                few of our grunt and dasher enemies.
-                            </sub>
-                        </p>
-                    </div>
-                </div>
-                <p>
-                    Guntattchment Saga was a really fun project to work on and
-                    had a multitude of challenges. An interesting challenge that
-                    you may not even notice was the rotation of objects such as
-                    the players weapon. Rotating pixel art is a very difficult
-                    thing to do because in the world of pixels you are dealing
-                    with such a little amount of information. Even a single
-                    misplaced pixel can cause a sprite to read in a totally
-                    different and unintended way. To deal with this we developed
-                    an algorithm to prioritize outlines, while rotating the
-                    insides with a simple Nearest Neighbor algorithm. Doing so
-                    resulted in a relatively readable sprite when rotating
-                    sprites. It was a surprisingly difficult challenge as it
-                    intersected both art and programming, but was fun to work on
-                    overall.
-                </p>
-                <br />
-                <h3>Links:</h3>
-                <ul>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/scottbass47/gsts"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - Guntattchment Saga The Sequel
-                                Unity Repository
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/gsts_assets"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - Guntattchment Saga The Sequel
-                                Assets Repository
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-                <p>
-                    Unfortunately, the game currently is not in a releasable
-                    state and so there is no demo available online. If this ever
-                    changes, however, a link to the game will be added here.
-                </p>
-            </div>
-            <div className="text-block">
-                <h2>Skip the Scroll</h2>
-                <br />
-                <p>
-                    While working at Hover, I spent a lot of time on GitHub
-                    issue pages looking for answers and solutions to problems I
-                    had run into. I would always find myself sifting though the
-                    comments trying to find the right answer, which usually had
-                    the most upvotes and positive reactions. With that
-                    information, I decided to create a very simple chrome
-                    extension that would sift through all the comments on the
-                    page, sort them by positive reactions, and then allow you to
-                    traverse them from most positive reactions to least positive
-                    reactions.
-                </p>
-                <br />
-                <div className="captioned-image">
-                    <VideoAsset src={scroll} />
+                    <img src={datawarehouseVideo} />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 3:</b> Skip the Scroll in action, finding
-                            the highest rated comments and scrolling right to
-                            them
+                            <b>Figure 2:</b> Data pipeline stages from ingestion to analytical readiness.
                         </sub>
                     </p>
-                </div>
-                <p>
-                    The extension is open source and currently released on the
-                    Chrome web store. Skip the Scroll is obviously not a project
-                    with massive scope, but was fun to make and dive into the
-                    world of browser extensions. I wanted to showcase since it's
-                    a developer tool and I wanna give it some visibility for
-                    those who might find it useful.
-                </p>
-                <br />
-                <h3>Links:</h3>
+                </div>                <h3>Architecture Layers:</h3>
                 <ul>
                     <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/skip-the-scroll"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - Skip the Scroll Repository
-                            </p>
-                        </a>
+                        <span style={bronzeStyle}>Bronze Layer:</span> This layer loads raw data from various sources into SQL using DDL commands. Here we define all the data types and create tables for ingestion. It ensures all source data is captured and preserved for traceability.
                     </li>
                     <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://chrome.google.com/webstore/detail/skip-the-scroll/mfehannpjmgfagldoilpngeoecdfgmnd"
-                        >
-                            <p>
-                                <b>[Chrome Web Store]</b> - Skip the Scroll
-                            </p>
-                        </a>
+                        <span style={silverStyle}>Silver Layer:</span> This layer refines raw data from the Bronze layer into cleaned, structured, and business-ready datasets. It focuses on data quality, standardization, and light transformations to prepare data for analytics.
+                    </li>
+                    <li>
+                        <span style={goldStyle}>Gold Layer:</span> This layer delivers highly curated, aggregated, and analytics-ready data tailored for specific business use cases, dashboards, and reporting. It involves advanced transformations, business logic implementations, and joins across multiple Silver tables to generate insights-rich datasets.
                     </li>
                 </ul>
+                <br/>                <h3>Features:</h3>
                 <p>
-                    If you are a developer and have also found yourself
-                    scrolling through github comment after github comment saying
-                    "i also have this problem...", then I highly recommend you
-                    check out Skip the Scroll to save you some of your precious
-                    time. If you like it, feel free to star it on GitHub and
-                    rate it on the Chrome web store.
+                    Focuses on business KPIs and metrics and provides a single source of truth for analytics
+                </p>
+                <p>
+                    Implements dimensional modeling (e.g., star or snowflake schema)
+                </p>
+                <p>
+                    Performance optimization for downstream consumption
+                    Data in the Gold layer is consumed directly by BI tools, machine learning models, and reporting systems for decision-making
                 </p>
             </div>
+
             <ResumeDownload />
         </div>
     );

@@ -5,12 +5,12 @@ import Doom from '../applications/Doom';
 import OregonTrail from '../applications/OregonTrail';
 import ShutdownSequence from './ShutdownSequence';
 // import ThisComputer from '../applications/ThisComputer';
-import Henordle from '../applications/Henordle';
+import Wordle from '../applications/Wordle_Hired';
 import Toolbar from './Toolbar';
 import DesktopShortcut, { DesktopShortcutProps } from './DesktopShortcut';
 import Scrabble from '../applications/Scrabble';
 import { IconName } from '../../assets/icons';
-import Credits from '../applications/Credits';
+// import Credits from '../applications/Credits';
 
 export interface DesktopProps {}
 
@@ -33,7 +33,7 @@ const APPLICATIONS: {
     showcase: {
         key: 'showcase',
         name: 'My Showcase',
-        shortcutIcon: 'showcaseIcon',
+        shortcutIcon: 'myComputer',
         component: ShowcaseExplorer,
     },
     trail: {
@@ -56,16 +56,16 @@ const APPLICATIONS: {
     },
     henordle: {
         key: 'henordle',
-        name: 'Henordle',
+        name: 'Hire me Wordle',
         shortcutIcon: 'henordleIcon',
-        component: Henordle,
+        component: Wordle,
     },
-    credits: {
-        key: 'credits',
-        name: 'Credits',
-        shortcutIcon: 'credits',
-        component: Credits,
-    },
+    // credits: {
+    //     key: 'credits',
+    //     name: 'Credits',
+    //     shortcutIcon: 'credits',
+    //     component: Credits,
+    // },
 };
 
 const Desktop: React.FC<DesktopProps> = (props) => {
