@@ -57,7 +57,7 @@ const Contact: React.FC<ContactProps> = (props) => {
         try {
             setIsLoading(true);
             const res = await fetch(
-                'https://api.henryheffernan.com/api/contact',
+                'https://diveyammishra.vercel.app/api/send-email',
                 {
                     method: 'POST',
                     headers: {
@@ -71,14 +71,12 @@ const Contact: React.FC<ContactProps> = (props) => {
                     }),
                 }
             );
-            // the response will be either {success: true} or {success: false, error: message}
-            const data = (await res.json()) as
-                | {
-                      success: false;
-                      error: string;
-                  }
-                | { success: true };
-            if (data.success) {
+            // the server returns {message: 'success'} on success or an error status code
+            const data = await res.json();
+            // Convert the server response format to match our expected format
+            const responseData = res.ok 
+                ? { success: true }
+                : { success: false, error: data.message || 'Unknown error' };            if (responseData.success) {
                 setFormMessage(`Message successfully sent. Thank you ${name}!`);
                 setCompany('');
                 setEmail('');
@@ -87,7 +85,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                 setFormMessageColor(colors.blue);
                 setIsLoading(false);
             } else {
-                setFormMessage(data.error);
+                setFormMessage(responseData.error);
                 setFormMessageColor(colors.red);
                 setIsLoading(false);
             }
@@ -133,7 +131,6 @@ const Contact: React.FC<ContactProps> = (props) => {
                     I am currently employed, however if you have any
                     opportunities, feel free to reach out - I would love to
                     chat! You can reach me via my personal email, 
-                    The form below is out of service!
                 </p>
                 <br />
                 <p>

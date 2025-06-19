@@ -1,6 +1,4 @@
 import React from 'react';
-
-import girlRun from '../../../assets/pictures/projects/art/girl-run.gif';
 import Travel from "../../../assets/pictures/projects/art/image.png";
 export interface ArtProjectsProps {}
 
@@ -26,7 +24,7 @@ const ArtProjects: React.FC<ArtProjectsProps> = (props) => {
             <div className="text-block">
                 <h2>Blockchain</h2>
                 <br />
-                <img src={Travel}/>
+                {/* <img src={Travel}/> */}
                 <p>
                     I built a blockchain-based savings app that helps users
                     save money for their goals. The app allows users to
